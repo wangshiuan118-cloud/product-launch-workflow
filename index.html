@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>產品上市流程代辦事項</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="app-header-text">
+        <h1>產品上市流程代辦事項</h1>
+        <p class="app-subtitle">Product / Marketing 團隊工作流程管理</p>
+      </div>
+      <div class="app-header-actions">
+        <div class="overall-progress">
+          <span class="overall-progress-label" id="overall-progress-label">0 / 0 已完成</span>
+          <div class="progress-track">
+            <div class="progress-fill" id="overall-progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+        <button class="btn btn-outline" id="btn-reset">還原預設流程</button>
+      </div>
+    </header>
+
+    <main class="stages" id="stages"></main>
+
+    <div class="add-stage-row">
+      <button class="btn btn-secondary btn-add-stage" id="btn-add-stage">
+        <span class="plus-icon">＋</span> 新增流程階段
+      </button>
+    </div>
+
+    <footer class="app-footer">
+      進度已自動保存於此瀏覽器（localStorage）
+    </footer>
+  </div>
+
+  <!-- 通用對話框 -->
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div class="modal" role="dialog" aria-modal="true">
+      <h2 class="modal-title" id="modal-title"></h2>
+      <p class="modal-desc" id="modal-desc"></p>
+      <input type="text" class="input modal-input hidden" id="modal-input">
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="modal-cancel">取消</button>
+        <button class="btn btn-primary" id="modal-confirm">確認</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
